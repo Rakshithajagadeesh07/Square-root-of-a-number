@@ -23,19 +23,13 @@ Developed by: Rakshitha J
 RegisterNumber: 212223240135
 
 ```
-def sqrt(x):
-    if x<0:
-        print("not defined")
-    y=x/2.0
-    while True:
-        new=0.5*(y+x/y)
-        if new==y:
-            break
-        y=new
-    return y
-num=int(input())
-res=sqrt(num)
-print(f"Square root of the number: {res}")
+def newton(n,nt=100):
+    a=float(n)
+    for i in range(nt):
+        n=0.5*(n+a/n)
+    return n
+a=int(input())
+print("Square root of the number:",newton(a))
 ```
 
 ## Output:
